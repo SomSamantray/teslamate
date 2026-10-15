@@ -455,14 +455,19 @@
     "teslamate/cars/$car/locked": ["true"],
     "teslamate/cars/$car/longitude": ["13.350144", "13.36", "13.37"],
     "teslamate/cars/$car/model": ["3"],
-    "teslamate/cars/$car/odometer": ["16093.44", "16093.76", "16094.24"],
+    "teslamate/cars/$car/odometer": [
+      "16093.44",
+      "16093.6",
+      "16094.08",
+      "16094.24"
+    ],
     "teslamate/cars/$car/outside_temp": ["12.5"],
     "teslamate/cars/$car/plugged_in": ["false"],
     "teslamate/cars/$car/power": ["0", "5", "0"],
     "teslamate/cars/$car/rated_battery_range_km": ["386.24"],
     "teslamate/cars/$car/scheduled_charging_start_time": [""],
     "teslamate/cars/$car/sentry_mode": ["false"],
-    "teslamate/cars/$car/shift_state": ["", "D", "P"],
+    "teslamate/cars/$car/shift_state": ["", "P", "D", "P"],
     "teslamate/cars/$car/since": [
       "2024-01-01T00:00:00.000000Z",
       "2024-01-01T00:00:10.000Z",

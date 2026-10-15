@@ -103,8 +103,9 @@ defmodule TeslaMate.Characterization do
   the serve boundary a fetch is always parked, so the declared payload is
   served by that parked poll, not by a resume fetch. `summary` replies the
   `Summary` the UI would get, pinned as canonical JSON: keys sorted, `car`
-  replaced by `"$car"`, `since` as the value the replay clock produced,
-  values as Jason encodes them. `update_car_settings` runs the production
+  replaced by `"$car"`, `geofence` by its name, `since` as the value the
+  replay clock produced, values as Jason encodes them.
+  `update_car_settings` runs the production
   `Settings.update_car_settings/2` (changeset, `car_settings` row) and sends
   the persisted struct to the vehicle exactly as the PubSub broadcast would;
   its reply is `"ok"` or the changeset errors, pinned in `calls`. The attrs
@@ -799,6 +800,7 @@ defmodule TeslaMate.Characterization do
       summary
       |> Map.from_struct()
       |> Map.put(:car, "$car")
+      |> Map.update!(:geofence, &canonical_geofence/1)
       |> Jason.encode!()
       |> Jason.decode!()
 
@@ -822,6 +824,10 @@ defmodule TeslaMate.Characterization do
       }
     }
   end
+
+  # The geofence of the shown position, as the UI and MQTT name it.
+  defp canonical_geofence(nil), do: nil
+  defp canonical_geofence(%TeslaMate.Locations.GeoFence{name: name}), do: name
 
   defp with_run_id({module, _opts} = child, run_id) do
     Supervisor.child_spec(child, id: {module, run_id})

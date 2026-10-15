@@ -203,6 +203,7 @@
     "teslamate/cars/$car/charger_voltage": [""],
     "teslamate/cars/$car/charging_state": ["Disconnected"],
     "teslamate/cars/$car/display_name": ["blue"],
+    "teslamate/cars/$car/elevation": ["10"],
     "teslamate/cars/$car/est_battery_range_km": ["370.95"],
     "teslamate/cars/$car/exterior_color": ["DeepBlue"],
     "teslamate/cars/$car/geofence": [""],

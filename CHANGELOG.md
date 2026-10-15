@@ -13,6 +13,7 @@
 - perf(web): connect to the map tile server early, so maps appear sooner (#5826 - @JakobLichterfeld)
 - fix(web): label cars without a name by their VIN in the settings, like the car summary (#5821 - @TUNER88)
 - fix(web): label cars without a name by their VIN on the charge cost page and in the vehicle reload hint, like the car summary (#5827 - @JakobLichterfeld)
+- fix(vehicle): stop values in the car summary and on MQTT from jumping back while driving (#5864 - @JakobLichterfeld)
 
 #### Build, CI, internal
 

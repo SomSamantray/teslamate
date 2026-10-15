@@ -418,7 +418,7 @@
     "teslamate/cars/$car/locked": ["true"],
     "teslamate/cars/$car/longitude": ["13.350144", "13.36", "13.37"],
     "teslamate/cars/$car/model": ["3"],
-    "teslamate/cars/$car/odometer": ["16093.44", "16093.6", "16093.92"],
+    "teslamate/cars/$car/odometer": ["16093.44", "16093.76", "16093.92"],
     "teslamate/cars/$car/outside_temp": ["12.5"],
     "teslamate/cars/$car/plugged_in": ["false"],
     "teslamate/cars/$car/power": ["0", "5", "6", "0"],

@@ -56,15 +56,7 @@ defmodule TeslaMate.VehicleCase do
       end)
 
     deps =
-      [
-        name: name,
-        deps_log: {LogMock, log_name},
-        deps_api: {ApiMock, api_name},
-        deps_settings: {SettingsMock, settings_name},
-        deps_locations: {LocationsMock, locations_name},
-        deps_vehicles: {VehiclesMock, vehicles_name},
-        deps_pubsub: {PubSubMock, pubsub_name}
-      ]
+      deps(name)
       |> Enum.filter(fn
         {:deps_log, _} -> mock_log?
         _ -> true
@@ -75,6 +67,29 @@ defmodule TeslaMate.VehicleCase do
     assert_receive {SettingsMock, :subscribe_to_changes}
 
     :ok
+  end
+
+  # A process restart: stops the vehicle started by start_vehicle/3 and
+  # starts a fresh one for the same car on the same mocks.
+  def restart_vehicle(name, %Car{} = car) do
+    :ok = stop_supervised(:"#{Vehicle}_#{car.id}")
+    {:ok, _pid} = start_supervised({Vehicle, [car: car] ++ deps(name)})
+
+    assert_receive {SettingsMock, :subscribe_to_changes}
+
+    :ok
+  end
+
+  defp deps(name) do
+    [
+      name: name,
+      deps_log: {LogMock, :"log_#{name}"},
+      deps_api: {ApiMock, :"api_#{name}"},
+      deps_settings: {SettingsMock, :"settings_#{name}"},
+      deps_locations: {LocationsMock, :"locations_#{name}"},
+      deps_vehicles: {VehiclesMock, :"vehicles_#{name}"},
+      deps_pubsub: {PubSubMock, :"pubsub_#{name}"}
+    ]
   end
 
   def online_event(ts, opts \\ []) do

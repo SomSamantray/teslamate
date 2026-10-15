@@ -438,6 +438,7 @@
       "Stopped"
     ],
     "teslamate/cars/$car/display_name": ["blue"],
+    "teslamate/cars/$car/elevation": ["10"],
     "teslamate/cars/$car/est_battery_range_km": ["370.95", "306.58", "308.19"],
     "teslamate/cars/$car/exterior_color": ["DeepBlue"],
     "teslamate/cars/$car/geofence": [""],
@@ -464,7 +465,7 @@
     "teslamate/cars/$car/odometer": ["16093.44"],
     "teslamate/cars/$car/outside_temp": ["12.5"],
     "teslamate/cars/$car/plugged_in": ["false", "true"],
-    "teslamate/cars/$car/power": ["0"],
+    "teslamate/cars/$car/power": ["0", "-3", "0"],
     "teslamate/cars/$car/rated_battery_range_km": [
       "386.24",
       "314.63",

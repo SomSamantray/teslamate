@@ -1,0 +1,76 @@
+{
+  "car": {
+    "efficiency": 0.153,
+    "eid": 42,
+    "model": "3",
+    "name": "blue",
+    "vid": 1000,
+    "vin": "5YJ3E1EA1KF000001"
+  },
+  "description": "Summary read model (#5863), probe frame: the car starts asleep, the base is restored from the seeded position (no timestamps). A bare online answer connects the stream for the pre-online check; a probe frame without power (subsystem check, fake online) arrives inside the Office geofence. The state stays asleep, the summary shows the frame at once: its position and Office geofence, battery level, odometer lower bound and elevation, no gear and no speed (criteria 2, 3, 4, 6 and 7); a missing base timestamp never counts as newer. A summary call pins it; the asleep answers keep the replay repeat-neutral.",
+  "events": [
+    {
+      "vehicle": {
+        "state": "asleep"
+      }
+    },
+    {
+      "vehicle": {
+        "state": "online"
+      }
+    },
+    {
+      "stream": "1704067230000,,10000.2,62,44,120,52.52,13.36,,,180,200,300"
+    },
+    {
+      "call": "summary"
+    },
+    {
+      "vehicle": {
+        "state": "asleep"
+      }
+    }
+  ],
+  "geofences": [
+    {
+      "latitude": 52.52,
+      "longitude": 13.36,
+      "name": "Office",
+      "radius": 100
+    }
+  ],
+  "seed": {
+    "positions": [
+      {
+        "battery_heater": false,
+        "battery_heater_no_power": null,
+        "battery_heater_on": false,
+        "battery_level": 64,
+        "date": "2023-12-31T23:00:00Z",
+        "driver_temp_setting": 15.0,
+        "elevation": null,
+        "est_battery_range_km": 268.07,
+        "fan_status": 0,
+        "ideal_battery_range_km": 315.06,
+        "inside_temp": 20.1,
+        "is_climate_on": false,
+        "is_front_defroster_on": false,
+        "is_rear_defroster_on": false,
+        "latitude": 52.514521,
+        "longitude": 13.350144,
+        "odometer": 16093.44,
+        "outside_temp": 16.5,
+        "passenger_temp_setting": 15.0,
+        "power": 0,
+        "rated_battery_range_km": 315.06,
+        "speed": null,
+        "usable_battery_level": 64
+      }
+    ]
+  },
+  "settings": {
+    "suspend_after_idle_min": 100000,
+    "suspend_min": 100000,
+    "use_streaming_api": true
+  }
+}

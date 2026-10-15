@@ -513,9 +513,9 @@
     "teslamate/cars/$car/model": ["3"],
     "teslamate/cars/$car/odometer": [
       "16093.44",
-      "16093.6",
-      "16094.08",
-      "16095.69",
+      "16093.92",
+      "16095.53",
+      "16097.14",
       "16097.3"
     ],
     "teslamate/cars/$car/outside_temp": ["12.5"],

@@ -148,6 +148,7 @@
     "teslamate/cars/$car/charger_phases": [""],
     "teslamate/cars/$car/charger_power": [""],
     "teslamate/cars/$car/charger_voltage": [""],
+    "teslamate/cars/$car/elevation": ["10"],
     "teslamate/cars/$car/geofence": [""],
     "teslamate/cars/$car/healthy": ["", "true"],
     "teslamate/cars/$car/model": ["3"],

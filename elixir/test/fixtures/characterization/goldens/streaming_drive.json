@@ -454,7 +454,7 @@
     "teslamate/cars/$car/charger_voltage": [""],
     "teslamate/cars/$car/charging_state": ["Disconnected"],
     "teslamate/cars/$car/display_name": ["blue"],
-    "teslamate/cars/$car/elevation": ["1", "2", "3", "4"],
+    "teslamate/cars/$car/elevation": ["10", "1", "2", "3", "4", "5"],
     "teslamate/cars/$car/est_battery_range_km": ["370.95"],
     "teslamate/cars/$car/exterior_color": ["DeepBlue"],
     "teslamate/cars/$car/geofence": [""],
@@ -466,6 +466,7 @@
     "teslamate/cars/$car/is_user_present": ["false"],
     "teslamate/cars/$car/latitude": [
       "52.514521",
+      "52.5146",
       "52.52",
       "52.53",
       "52.54",
@@ -475,6 +476,10 @@
       {
         "latitude": 52.514521,
         "longitude": 13.350144
+      },
+      {
+        "latitude": 52.5146,
+        "longitude": 13.3502
       },
       {
         "latitude": 52.52,
@@ -496,6 +501,7 @@
     "teslamate/cars/$car/locked": ["true"],
     "teslamate/cars/$car/longitude": [
       "13.350144",
+      "13.3502",
       "13.36",
       "13.37",
       "13.38",
@@ -504,8 +510,8 @@
     "teslamate/cars/$car/model": ["3"],
     "teslamate/cars/$car/odometer": [
       "16093.44",
-      "16093.6",
-      "16093.92",
+      "16093.76",
+      "16094.08",
       "16094.24",
       "16094.41"
     ],
@@ -515,7 +521,7 @@
     "teslamate/cars/$car/rated_battery_range_km": ["386.24"],
     "teslamate/cars/$car/scheduled_charging_start_time": [""],
     "teslamate/cars/$car/sentry_mode": ["false"],
-    "teslamate/cars/$car/shift_state": ["", "D", "N", "R", "P"],
+    "teslamate/cars/$car/shift_state": ["", "P", "D", "N", "R", "P"],
     "teslamate/cars/$car/since": [
       "2024-01-01T00:00:00.000000Z",
       "2024-01-01T00:00:20.000Z",
